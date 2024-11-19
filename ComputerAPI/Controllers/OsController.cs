@@ -59,7 +59,7 @@ namespace ComputerAPI.Controllers
             {
                 existingOs.Name = updateOsDto.Name;
                 computerContext.Os.Update(existingOs);
-                computerContext.SaveChanges();
+                await computerContext.SaveChangesAsync();
                 return StatusCode(200, existingOs);
             }
             return StatusCode(404);
@@ -71,7 +71,7 @@ namespace ComputerAPI.Controllers
             if (os != null)
             {
                 computerContext.Os.Remove(os);
-                computerContext.SaveChanges();
+                await computerContext.SaveChangesAsync();
                 return Ok();
             }
             return NotFound();
