@@ -65,7 +65,7 @@ namespace ComputerAPI.Controllers
             return StatusCode(404);
         }
         [HttpDelete]
-        public async Task<ActionResult<OSystem>> Delete(Guid id)
+        public async Task<ActionResult> Delete(Guid id)
         {
             var os = await computerContext.Os.FirstOrDefaultAsync(x => id == x.Id);
             if (os != null)
