@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComputerAPI.Models;
 
-public partial class Os
+public partial class OSystem
 {
     public Guid Id { get; set; }
 

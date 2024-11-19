@@ -1,4 +1,7 @@
 
+using ComputerAPI.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace ComputerAPI
 {
     public class Program
@@ -7,8 +10,14 @@ namespace ComputerAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
 
+            // Add services to the container.
+            builder.Services.AddDbContext<ComputerContext>(option =>
+            {
+                var connectionString = builder.Configuration.GetConnectionString("MySql");
+                option.UseMySQL(connectionString);
+            });
+                        
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
