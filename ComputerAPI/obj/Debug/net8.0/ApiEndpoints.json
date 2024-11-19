@@ -47,6 +47,37 @@
   },
   {
     "ContainingType": "ComputerAPI.Controllers.OsController",
+    "Method": "Put",
+    "RelativePath": "api/Os",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateOsDto",
+        "Type": "ComputerAPI.Models.UpdateOsDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.OSystem",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComputerAPI.Controllers.OsController",
     "Method": "GetId",
     "RelativePath": "api/Os/id",
     "HttpMethod": "GET",

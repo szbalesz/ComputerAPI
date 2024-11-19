@@ -42,7 +42,27 @@ namespace ComputerAPI.Controllers
         [HttpGet("id")]
         public async Task<ActionResult<OSystem>> GetId(Guid id)
         {
-            return Ok(await computerContext.Os.FirstOrDefaultAsync(x => id == x.Id));
+            var os = await computerContext.Os.FirstOrDefaultAsync(x => id == x.Id);
+            if (os != null)
+            {
+                return Ok(os);
+            }
+            return NotFound();
+        }
+        [HttpPut]
+        public async Task<ActionResult<OSystem>> Put(UpdateOsDto updateOsDto, Guid id)
+        {
+
+            var existingOs = await computerContext.Os.FirstOrDefaultAsync(x => id == x.Id);
+
+            if (existingOs != null)
+            {
+                existingOs.Name = updateOsDto.Name;
+                computerContext.Os.Update(existingOs);
+                computerContext.SaveChanges();
+                return StatusCode(200, existingOs);
+            }
+            return StatusCode(404);
         }
     }
 }
