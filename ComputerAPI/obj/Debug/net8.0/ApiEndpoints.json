@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "ComputerAPI.Controllers.CompController",
+    "Method": "Post",
+    "RelativePath": "api/Comp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCompDto",
+        "Type": "ComputerAPI.Models.CreateCompDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.Comp",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ComputerAPI.Controllers.OsController",
     "Method": "Post",
     "RelativePath": "api/Os",
@@ -90,17 +116,7 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ComputerAPI.Models.OSystem",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ComputerAPI.Controllers.OsController",
