@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
+using System.Security.Cryptography;
+using System;
 
 namespace ComputerAPI.Controllers
 {
@@ -54,6 +57,26 @@ namespace ComputerAPI.Controllers
                 return Ok(comp);
             }
             return NotFound();
+        }
+        [HttpPut]
+        public async Task<ActionResult<Comp>> Put(UpdateCompDto updateCompDto, Guid id)
+        {
+
+            var existingComp = await computerContext.Comps.FirstOrDefaultAsync(x => id == x.Id);
+
+            if (existingComp != null)
+            {
+                existingComp.Brand = updateCompDto.Brand;
+                existingComp.Type = updateCompDto.Type;
+                existingComp.Display = updateCompDto.Display;
+                existingComp.Memory = updateCompDto.Memory;
+                existingComp.OsId = updateCompDto.OsId;
+
+                computerContext.Comps.Update(existingComp);
+                await computerContext.SaveChangesAsync();
+                return StatusCode(200, existingComp);
+            }
+            return StatusCode(404);
         }
     }
 }
