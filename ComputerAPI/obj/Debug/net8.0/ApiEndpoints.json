@@ -26,6 +26,26 @@
     ]
   },
   {
+    "ContainingType": "ComputerAPI.Controllers.CompController",
+    "Method": "Get",
+    "RelativePath": "api/Comp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.Comp",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ComputerAPI.Controllers.OsController",
     "Method": "Post",
     "RelativePath": "api/Os",
