@@ -46,6 +46,32 @@
     ]
   },
   {
+    "ContainingType": "ComputerAPI.Controllers.CompController",
+    "Method": "GetId",
+    "RelativePath": "api/Comp/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.Comp",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ComputerAPI.Controllers.OsController",
     "Method": "Post",
     "RelativePath": "api/Os",

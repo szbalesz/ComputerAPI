@@ -45,5 +45,15 @@ namespace ComputerAPI.Controllers
         {
             return Ok(await computerContext.Comps.ToListAsync());
         }
+        [HttpGet("id")]
+        public async Task<ActionResult<Comp>> GetId(Guid id)
+        {
+            var comp = await computerContext.Comps.FirstOrDefaultAsync(x => id == x.Id);
+            if (comp != null)
+            {
+                return Ok(comp);
+            }
+            return NotFound();
+        }
     }
 }
