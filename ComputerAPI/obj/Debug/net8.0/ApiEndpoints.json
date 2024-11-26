@@ -94,6 +94,26 @@
   },
   {
     "ContainingType": "ComputerAPI.Controllers.CompController",
+    "Method": "GetAllWindowsOsComputer",
+    "RelativePath": "api/Comp/allWindowsOsComputer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.Comp",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComputerAPI.Controllers.CompController",
     "Method": "GetId",
     "RelativePath": "api/Comp/id",
     "HttpMethod": "GET",
@@ -117,6 +137,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ComputerAPI.Controllers.CompController",
+    "Method": "GetNumberOfComputers",
+    "RelativePath": "api/Comp/numberOfComputers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ComputerAPI.Controllers.OsController",
@@ -239,7 +269,7 @@
   },
   {
     "ContainingType": "ComputerAPI.Controllers.OsController",
-    "Method": "GetWithAllComputert",
+    "Method": "GetWithAllComputer",
     "RelativePath": "api/Os/withAllComputer",
     "HttpMethod": "GET",
     "IsController": true,

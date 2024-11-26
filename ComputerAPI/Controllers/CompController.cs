@@ -46,8 +46,22 @@ namespace ComputerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<Comp>> Get()
         {
-            return Ok(await computerContext.Comps.ToListAsync());
+            return Ok(await computerContext.Comps.Select(x => new { x.Brand, x.Type, x.Memory, x.Os.Name }).ToListAsync());
         }
+
+        [HttpGet("numberOfComputers")]
+        public async Task<ActionResult> GetNumberOfComputers()
+        {
+            var c = await computerContext.Comps.ToListAsync();
+            return Ok(new { message = "Sikeres lekérdezés!", result = c.Count() });
+        }
+
+        [HttpGet("allWindowsOsComputer")]
+        public async Task<ActionResult<Comp>> GetAllWindowsOsComputer()
+        {
+            return Ok(await computerContext.Comps.Where(x => x.Os.Name.Contains("Windows")).Select(x=> new { comp = x,osName = x.Os.Name }).ToListAsync());
+        }
+
         [HttpGet("id")]
         public async Task<ActionResult<Comp>> GetId(Guid id)
         {
