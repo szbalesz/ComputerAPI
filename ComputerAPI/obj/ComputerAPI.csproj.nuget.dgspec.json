@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bales\\Desktop\\asőoiduhasjdk\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj": {}
+    "C:\\Users\\Tanulo\\source\\repos\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bales\\Desktop\\asőoiduhasjdk\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj": {
+    "C:\\Users\\Tanulo\\source\\repos\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bales\\Desktop\\asőoiduhasjdk\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Tanulo\\source\\repos\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj",
         "projectName": "ComputerAPI",
-        "projectPath": "C:\\Users\\bales\\Desktop\\asőoiduhasjdk\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj",
-        "packagesPath": "C:\\Users\\bales\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bales\\Desktop\\asőoiduhasjdk\\ComputerAPI\\ComputerAPI\\obj\\",
+        "projectPath": "C:\\Users\\Tanulo\\source\\repos\\ComputerAPI\\ComputerAPI\\ComputerAPI.csproj",
+        "packagesPath": "C:\\Users\\Tanulo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tanulo\\source\\repos\\ComputerAPI\\ComputerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bales\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tanulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

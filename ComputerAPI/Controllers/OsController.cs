@@ -76,5 +76,10 @@ namespace ComputerAPI.Controllers
             }
             return NotFound();
         }
+        [HttpGet("withAllComputer")]
+        public async Task<ActionResult<OSystem>> GetWithAllComputer()
+        {
+            return Ok(await computerContext.Os.Include(os => os.Comps).ToListAsync());
+        }
     }
 }
