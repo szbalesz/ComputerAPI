@@ -269,6 +269,26 @@
   },
   {
     "ContainingType": "ComputerAPI.Controllers.OsController",
+    "Method": "GetOsOrderDescendant",
+    "RelativePath": "api/Os/osOrderDescendant",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ComputerAPI.Models.Comp",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComputerAPI.Controllers.OsController",
     "Method": "GetWithAllComputer",
     "RelativePath": "api/Os/withAllComputer",
     "HttpMethod": "GET",

@@ -81,5 +81,11 @@ namespace ComputerAPI.Controllers
         {
             return Ok(await computerContext.Os.Include(os => os.Comps).ToListAsync());
         }
+
+        [HttpGet("osOrderDescendant")]
+        public async Task<ActionResult<Comp>> GetOsOrderDescendant()
+        {
+            return Ok(await computerContext.Os.OrderByDescending(x => x.Name).ToListAsync());
+        }
     }
 }
